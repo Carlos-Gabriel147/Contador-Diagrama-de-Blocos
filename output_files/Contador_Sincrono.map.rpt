@@ -1,0 +1,352 @@
+Analysis & Synthesis report for Contador_Sincrono
+Wed Dec 14 01:15:44 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: LPM_COUNTER:inst1
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 14 01:15:44 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; Contador_Sincrono                           ;
+; Top-level Entity Name              ; lpm01                                       ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 33                                          ;
+;     Total combinational functions  ; 33                                          ;
+;     Dedicated logic registers      ; 23                                          ;
+; Total registers                    ; 23                                          ;
+; Total pins                         ; 24                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; lpm01              ; Contador_Sincrono  ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation              ; All                ; All                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                      ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; lpm01.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/carlo/Desktop/Periodo_22.1/Eletronica_Digital/Projetos/Projeto_1/Quartus/lpm01.bdf       ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf                            ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc                           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                             ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                            ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/cmpconst.inc                               ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc                            ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc                            ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffeea.inc                                 ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                    ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                             ;         ;
+; db/cntr_8sh.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/carlo/Desktop/Periodo_22.1/Eletronica_Digital/Projetos/Projeto_1/Quartus/db/cntr_8sh.tdf ;         ;
+; db/cmpr_aic.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/carlo/Desktop/Periodo_22.1/Eletronica_Digital/Projetos/Projeto_1/Quartus/db/cmpr_aic.tdf ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                         ;
++---------------------------------------------+-------------------------------------------------------+
+; Resource                                    ; Usage                                                 ;
++---------------------------------------------+-------------------------------------------------------+
+; Estimated Total logic elements              ; 33                                                    ;
+;                                             ;                                                       ;
+; Total combinational functions               ; 33                                                    ;
+; Logic element usage by number of LUT inputs ;                                                       ;
+;     -- 4 input functions                    ; 7                                                     ;
+;     -- 3 input functions                    ; 0                                                     ;
+;     -- <=2 input functions                  ; 26                                                    ;
+;                                             ;                                                       ;
+; Logic elements by mode                      ;                                                       ;
+;     -- normal mode                          ; 11                                                    ;
+;     -- arithmetic mode                      ; 22                                                    ;
+;                                             ;                                                       ;
+; Total registers                             ; 23                                                    ;
+;     -- Dedicated logic registers            ; 23                                                    ;
+;     -- I/O registers                        ; 0                                                     ;
+;                                             ;                                                       ;
+; I/O pins                                    ; 24                                                    ;
+;                                             ;                                                       ;
+; Embedded Multiplier 9-bit elements          ; 0                                                     ;
+;                                             ;                                                       ;
+; Maximum fan-out node                        ; lpm_counter:inst1|cntr_8sh:auto_generated|cout_actual ;
+; Maximum fan-out                             ; 23                                                    ;
+; Total fan-out                               ; 213                                                   ;
+; Average fan-out                             ; 2.05                                                  ;
++---------------------------------------------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                       ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+-------------+--------------+
+; |lpm01                          ; 33 (2)              ; 23 (1)                    ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |lpm01                                                          ; lpm01       ; work         ;
+;    |lpm_counter:inst1|          ; 31 (0)              ; 22 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lpm01|lpm_counter:inst1                                        ; lpm_counter ; work         ;
+;       |cntr_8sh:auto_generated| ; 31 (24)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lpm01|lpm_counter:inst1|cntr_8sh:auto_generated                ; cntr_8sh    ; work         ;
+;          |cmpr_aic:cmpr1|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lpm01|lpm_counter:inst1|cntr_8sh:auto_generated|cmpr_aic:cmpr1 ; cmpr_aic    ; work         ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 23    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 22    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER:inst1  ;
++------------------------+-------------------+--------------------+
+; Parameter Name         ; Value             ; Type               ;
++------------------------+-------------------+--------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY         ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY       ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE       ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE     ;
+; LPM_WIDTH              ; 22                ; Untyped            ;
+; LPM_DIRECTION          ; DEFAULT           ; Untyped            ;
+; LPM_MODULUS            ; 4                 ; Untyped            ;
+; LPM_AVALUE             ; UNUSED            ; Untyped            ;
+; LPM_SVALUE             ; UNUSED            ; Untyped            ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped            ;
+; DEVICE_FAMILY          ; Cyclone IV E      ; Untyped            ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped            ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK ;
+; CARRY_CNT_EN           ; SMART             ; Untyped            ;
+; LABWIDE_SCLR           ; ON                ; Untyped            ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped            ;
+; CBXI_PARAMETER         ; cntr_8sh          ; Untyped            ;
++------------------------+-------------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 24                          ;
+; cycloneiii_ff         ; 23                          ;
+;     SLD               ; 22                          ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 33                          ;
+;     arith             ; 22                          ;
+;         2 data inputs ; 22                          ;
+;     normal            ; 11                          ;
+;         0 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
+;         4 data inputs ; 7                           ;
+;                       ;                             ;
+; Max LUT depth         ; 5.20                        ;
+; Average LUT depth     ; 3.77                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Dec 14 01:15:37 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Contador_Assincrono -c Contador_Sincrono
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file contador_sincrono.bdf
+    Info (12023): Found entity 1: Contador_Sincrono
+Info (12021): Found 1 design units, including 1 entities, in source file lpm05.bdf
+    Info (12023): Found entity 1: lpm05
+Info (12021): Found 1 design units, including 1 entities, in source file lpm01.bdf
+    Info (12023): Found entity 1: lpm01
+Info (12021): Found 1 design units, including 1 entities, in source file seletor_display.bdf
+    Info (12023): Found entity 1: Seletor_Display
+Info (12021): Found 1 design units, including 1 entities, in source file multiplexador.bdf
+    Info (12023): Found entity 1: multiplexador
+Info (12021): Found 1 design units, including 1 entities, in source file decodificador.bdf
+    Info (12023): Found entity 1: decodificador
+Info (12127): Elaborating entity "lpm01" for the top level hierarchy
+Info (12128): Elaborating entity "LPM_COUNTER" for hierarchy "LPM_COUNTER:inst1"
+Info (12130): Elaborated megafunction instantiation "LPM_COUNTER:inst1"
+Info (12133): Instantiated megafunction "LPM_COUNTER:inst1" with the following parameter:
+    Info (12134): Parameter "LPM_MODULUS" = "4"
+    Info (12134): Parameter "LPM_WIDTH" = "22"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_8sh.tdf
+    Info (12023): Found entity 1: cntr_8sh File: C:/Users/carlo/Desktop/Periodo_22.1/Eletronica_Digital/Projetos/Projeto_1/Quartus/db/cntr_8sh.tdf Line: 28
+Info (12128): Elaborating entity "cntr_8sh" for hierarchy "LPM_COUNTER:inst1|cntr_8sh:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_aic.tdf
+    Info (12023): Found entity 1: cmpr_aic File: C:/Users/carlo/Desktop/Periodo_22.1/Eletronica_Digital/Projetos/Projeto_1/Quartus/db/cmpr_aic.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_aic" for hierarchy "LPM_COUNTER:inst1|cntr_8sh:auto_generated|cmpr_aic:cmpr1" File: C:/Users/carlo/Desktop/Periodo_22.1/Eletronica_Digital/Projetos/Projeto_1/Quartus/db/cntr_8sh.tdf Line: 146
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 57 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 23 output pins
+    Info (21061): Implemented 33 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4761 megabytes
+    Info: Processing ended: Wed Dec 14 01:15:44 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:18
+
+

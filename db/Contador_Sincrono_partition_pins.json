@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "clk01",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[21]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[20]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[19]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[18]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[17]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[16]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[15]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[14]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[13]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[12]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[11]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[10]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[9]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[8]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[7]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[6]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[5]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[4]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[3]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[2]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[1]",
+					"strict" : false
+				},
+				{
+					"name" : "counter01[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
